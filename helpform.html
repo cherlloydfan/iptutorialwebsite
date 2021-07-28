@@ -1,0 +1,125 @@
+<!doctype html>
+<html> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/helpform.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap" rel="stylesheet">
+
+<title> IP tutorials </title>
+</head>
+<body >
+ <div id="nav" >
+    <p><img src=' 'width="30" height="30">IP tutorials</p>
+    <ul>
+        <li style="text-align:right;"> <a href="studentdashboard.php"> Home </a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Work
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="courseprogress.php">Courses</a>
+                  <a href="projectprogress.php">Projects</a>
+            
+            </div></div>
+            <div class="dropdown">
+                <button class="dropbtn">Other
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="jobprogress.php">Jobs</a>
+            <a href="certificates.html">Certificates</a>
+                      <a href="supportpage.html">Support</a>
+                      <a href="messages.php">Messages</a>
+                                <a href="payment.php">Payments</a>
+
+                      <a href="community.php">Community</a>
+                </div></div>
+                <div class="dropdown">
+                    <button class="dropbtn">Account
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="studentprofile.php">Profile</a>
+                      <a href="studentaccount.php">Account details</a>
+                      <a href="studentsettings.html">Settings</a>
+                      <a href="logout.php">Log out</a>
+                      
+                    </div></div>
+       
+    </ul>
+</div>
+
+ <!-- <div id="background"> -->
+ <section>
+     <div id="header" style="margin-bottom: 10%;">
+<div id="headertext">Help form</div>
+ </div>
+</section  >
+
+<div style="margin-left:5%;margin-bottom: 10%;">
+<table>
+<form action="sendhelpform.php" method="post">
+   
+  
+    <div class="container">
+    <table>
+      <tr><td>  <label style="padding-bottom:20px" for="name"><b>Name:</b></label></td>
+      <td><input type="text" placeholder="Enter your name" name="name" required><br></td></tr>
+      <tr><td><label style="padding-bottom:20px" for="email"><b>Email address:</b></label></td>
+     <td> <input type="email" placeholder="Enter your email address" name="email" required><br></td></tr>
+     <tr><td> <label style="padding-bottom:20px" for="phone"><b>Phone number:</b></label></td>
+      <td><input type="tel" placeholder="Enter your phone number" name="phone" required><br></td></tr>
+            <tr><td>  <label style="padding-bottom:20px" for="ticketname"><b>Ticket name:</b></label></td>
+      <td><input type="text" placeholder="Enter the ticket name" name="ticketname" required><br></td></tr>
+  
+      <tr><td><label for="question" style=" padding-bottom: 20px;"><b>Message:</b></label><br></td>
+     <td> <textarea style="width: 100%;margin-top:20px;margin-bottom:20px" type="text" rows=5 placeholder="Enter your question" name="message" required></textarea><br></td></tr>
+  
+     <tr><td> <button type="submit" name="send">Send</button><br></td></tr>
+      
+    </div>
+  
+   
+      
+      
+    
+  </form>
+  </table>
+  
+</div>
+
+<div style="background-color: #d4d4d4;">
+    <footer style="background-color: #d4d4d4;">
+      <div style="position:relative;background-color:#d4d4d4" class="footer" id="footer">
+        <div class="logo">
+          <p style="font-size: 10pt;"><img src='' width="30" height="30" align="left" style="display: inline-block;">IP tutorials</p>
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+  
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+ 
+</body>
+</html>

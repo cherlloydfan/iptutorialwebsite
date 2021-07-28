@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/studentsettings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap" rel="stylesheet">
+
+<title> IP tutorials </title>
+</head>
+<body >
+ <div id="nav" >
+    <p><img src=' 'width="30" height="30">IP tutorials</p>
+    <ul>
+        <li style="text-align:right;"> <a href="studentdashboard.php"> Home </a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Work
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="courseprogress.php">Courses</a>
+                  <a href="projectprogress.php">Projects</a>
+            
+            </div></div>
+            <div class="dropdown">
+                <button class="dropbtn">Other
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="jobprogress.php">Jobs</a>
+            <a href="certificates.html">Certificates</a>
+                      <a href="supportpage.html">Support</a>
+                      <a href="messages.php">Messages</a>
+                                <a href="payment.php">Payments</a>
+
+                      <a href="community.php">Community</a>
+                </div></div>
+                <div class="dropdown">
+                    <button class="dropbtn">Account
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="studentprofile.php">Profile</a>
+                      <a href="studentaccount.php">Account details</a>
+                      <a href="studentsettings.html">Settings</a>
+                      <a href="logout.php">Log out</a>
+                      
+                    </div></div>
+       
+    </ul>
+</div>
+ <!-- <div id="background"> -->
+ <section>
+     <div id="header" style="margin-bottom: 10%;">
+<div id="headertext">Settings page</div>
+ </div>
+</section  >
+<div  style="margin-left:5%;margin-bottom: 10%;">
+  
+     <form action="update5.php" method="post" >
+  
+   
+    <div class="container" >
+    <table>
+     <div style="padding-bottom:5%">
+      <tr><td>  <h3>Change password:</h3></td></tr>
+     
+     <div style="padding-bottom: 15px;">
+    <tr><td> <label style="display: inline;">Password:</label></td>
+    <td> <input type="password" name="password" id="password"  minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z]).{8,20}" oninvalid="this.setCustomValidity('Password must be between 8-20 characters, have at least 1 number, a capital letter and a special character')"
+  oninput="this.setCustomValidity('')"> </input></td></tr>
+    </div><br>
+      <div style="padding-bottom: 15px;">
+    <tr><td> <label style="display: inline;">Confirm password:</label></td>
+    <td> <input type="password" name="confirmpassword" id="confirmpassword"  minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z]).{8,20}" oninvalid="this.setCustomValidity('Password must be between 8-20 characters, have at least 1 number, a capital letter and a special character')"
+  oninput="this.setCustomValidity('')"> </input></td></tr>
+    </div><br>
+       <div style="padding-bottom:5%">
+  <tr><td>
+        <h3> Change email address:</h3></td></tr>
+       <tr>
+       <div style="padding-bottom: 15px;">
+     <tr><td><label style="display: inline;">Email address:</label></td>
+     <td><input type="email" name="email" id="email"  minlength="2" maxlength="50" onkeyup="checkemail();"  pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"   > </input></td></tr>
+      </div><br>
+         <div style="padding-bottom: 15px;">
+     <tr><td><label style="display: inline;">Confirm Email address:</label></td>
+     <td><input type="email" name="confirmemail" id="confirmemail"  minlength="2" maxlength="50" onkeyup="checkemail();"  pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"   > </input></td></tr>
+      </div><br>
+       <tr><td> <button style=" width:100px; margin-right:2%" type="submit" name="edit" id="edit" value="signup" id="signup"  onclick="CheckPassword(document.signupform.password);validateEmail(document.signupform.email);validation(document.signupform.firstname,surname,email,username,password,confirmpassword);checkname(document.signupform.username);validateForm();checkemail(document.signupform.email);ValidateEmail(document.signupform.email);validatesurname(document.signupform.surname);validatefirstname(document.signupform.firstname);Validatename(document.signupform.firstname)" onsubmit="return validateForm();" >Save details</button></td></tr>
+
+</p></tr></td>
+ </div>
+</table>
+</form>
+
+    
+  
+
+<table>
+<div style="padding-bottom:5%">
+    <tr><td>  <h3>Delete account:</h3></td></tr>
+<form action="delete.php" method="post">
+ 
+  <tr><td> <p><input type="submit" id="deleteaccount" name="deleteaccount" value="Delete account" onclick="confirm()"></p></td></tr>
+    
+</form>
+
+<p id="demo"></p>
+</div>
+</table>
+
+</div></div>
+<div style="background-color: #d4d4d4;">
+    <footer style="background-color: #d4d4d4;">
+      <div style="position:relative;background-color:#d4d4d4" class="footer" id="footer">
+        <div class="logo">
+          <p style="font-size: 10pt;"><img src='' width="30" height="30" align="left" style="display: inline-block;">IP tutorials</p>
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+  
+        </div>
+        <div class="column">
+          <h3>Pages</h3>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+          <p>Link</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <script>
+function confirm() {
+  var txt;
+  if (confirm("Are you sure that you want to delete your account?")) {
+     id = 8
+    user = User2.query.filter(id == id).first()
+    
+    
+   
+    db.session.delete(user)
+    db.session.commit()
+
+    txt = "Account deleted!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</body>
+</html>
