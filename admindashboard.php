@@ -74,16 +74,16 @@ if (!isset($_SESSION['loggedin'])) {
 
 <div class="left">
   <h2>Courses</h2>
-  <h3> <a href="tutorcourses.php">Course name</a></h3>
+  <h3> <a href="tutorcourses.php">Intellectual property</a></h3>
  
 
 </div>
 <div class="right">
  <h2> Support tickets</h2>
  <table>
-<tr><td> <h3>Date: </h3></td><td>Here will be the date.</td></tr>
- <tr><td><h3 >Ticket name: </h3></td><td>Here will be the name of the ticket.</td></tr>
-<tr><td> <h3 >Sender name: </h3></td><td>Here will be the name of the sender. </td>
+<tr><td> <h3>Date/time: </h3></td><td>2021-07-23 16:18:54</td></tr>
+ <tr><td><h3 >Ticket name: </h3></td><td>Change course</td></tr>
+<tr><td> <h3 >Sender name: </h3></td><td>Lucy </td>
  <tr><td><a href="adminsupportpage.php"><button >View query</button></a></td></tr></table>
 </div>
 </div>

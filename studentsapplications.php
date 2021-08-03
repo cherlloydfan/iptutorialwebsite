@@ -83,7 +83,7 @@ $stmt->close();
 <div id="headertext">Job applications</div>
  </div>
 </section  >
-<div style="margin-bottom: 10%;padding-bottom: 15%;margin-left: 5%;margin-right: 5%;height:800px">
+<div style="margin-bottom: 10%;padding-bottom: 15%;margin-left: 5%;margin-right: 5%;height:1100px">
 
   <table><tr><td><h3 >Student's first name:</h3></td><td><?=$firstname?></td></tr>
  <tr><td style="width:10%"><h3>Student's surname:</h3></td><td style="width:40%"><?=$surname?></td></tr>

@@ -86,10 +86,10 @@ if (!isset($_SESSION['loggedin'])) {
 <div class="right">
  <h2> Project submissions</h2>
  <table>
- <tr><td><h3 >Date:</h3></td><td>Here will be the date.</td></tr>
- <tr><td><h3  >Project title:</h3></td><td>Here will be the title of the project.</td></tr>
- <tr><td><h3 style="line-height: 1.4;">Course name:</h3></td><td style="line-height: 1.4;">Here will be the name of the course.</td></tr>
- <tr><td><h3 style="line-height: 1.4;" >Student name:</h3></td><td style="line-height: 1.4;">Here will be the name of the student.</td></tr>
+ <tr><td><h3 >Date/time:</h3></td><td>	2021-07-26 12:47:40</td></tr>
+ <tr><td><h3  >Project name:</h3></td><td>Copyright</td></tr>
+ <tr><td><h3 style="line-height: 1.4;">Course name:</h3></td><td style="line-height: 1.4;">Intellectual property</td></tr>
+ <tr><td><h3 style="line-height: 1.4;" >Student name:</h3></td><td style="line-height: 1.4;">Lucy Abbott</td></tr>
 <tr><td> <a href="markwork.php"><button >Mark submission</button></a></td></tr>
 
 

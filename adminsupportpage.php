@@ -95,7 +95,7 @@ $stmt->close();
     </tr>
 
  
-      <tr> <td><h3 > Date:</h3></td> 
+      <tr> <td><h3 > Date/time:</h3></td> 
       <td><?=$jobdate?> </td>
     </tr>
     

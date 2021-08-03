@@ -12,11 +12,11 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT jobname,jobdescription,jobdate,jobstage,jobcomments,jobinterviews FROM users WHERE id = ?');
+$stmt = $con->prepare('SELECT jobname,jobdescription,jobdate,jobstage,jobcomments,jobinterviews,address,town,city,postcode FROM users WHERE id = ?');
 // In this case we can use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($jobname,$jobdescription,$jobdate,$jobstage,$jobcomments,$jobinterviews);
+$stmt->bind_result($jobname,$jobdescription,$jobdate,$jobstage,$jobcomments,$jobinterviews,$address,$town,$city,$postcode);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -112,8 +112,8 @@ $stmt->close();
 
 </tr>
 <tr>
-    <td><h3>Job interviews:</h3></td>
-    <td><?=$jobinterviews?></td>
+    <td style="display: inline-block; position: relative;margin-top:-3%"><h3>Job interviews:</h3></td>
+    <td><p><b>Date/time:</b></p><p><?=$jobinterviews?> </p><p> <b>Address: </b></p><?=$address?>,</p><p> <?=$town?>,</p><p> <?=$city?>,</p><p><?=$postcode?></p></td>
    
 
 </tr>
@@ -138,7 +138,7 @@ $stmt->close();
    
  
 
-<div  class="right" style="text-align:right" > <img src="{{url_for('static', filename='images/programmer.jpg')}}" height='100' width='100'></div></div>
+<div  class="right" style="text-align:right" > <img src="images/programmer.jpg" height='100' width='100'></div></div>
 <div style="background-color: #d4d4d4;">
     <footer style="background-color: #d4d4d4;">
       <div style="position:relative;background-color:#d4d4d4" class="footer" id="footer">

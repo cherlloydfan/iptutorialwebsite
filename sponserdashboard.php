@@ -83,9 +83,9 @@ if (!isset($_SESSION['loggedin'])) {
  <h2> Job applications</h2>
  
  <table>
- <tr><td><h3 >Date: </h3> </td><td>Here will be the date.</td></tr>
- <tr><td><h3 >Job name: </h3></td><td>Here will be the name of the job.</td></tr>
- <tr><td><h3 >Student name: </h3></td><td> Here will be the name of the student.</td></tr>
+ <tr><td><h3 >Date/time: </h3> </td><td>2021-07-27 12:15:30</td></tr>
+ <tr><td><h3 >Job name: </h3></td><td>PHP programmer</td></tr>
+ <tr><td><h3 >Student name: </h3></td><td>Lucy Abbott</td></tr>
 <tr><td><a href="studentsapplications.php"><button >View application</button></a></td></tr>
 </table>
 </div>

@@ -19,7 +19,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 }
 
 
-if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password FROM users WHERE  username = ?')) {
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	$stmt->store_result();

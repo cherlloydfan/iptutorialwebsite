@@ -221,7 +221,10 @@ li a:hover {
     float: left;
     width: 25%;
 }
-
+.column2 {
+    float: left;
+    width: 33.33%;
+}
 /* Clear floats after image containers */
 .row::after {
     content: "";
@@ -239,7 +242,16 @@ li a:hover {
 
 
 }
+#box22 {
 
+    margin-left: 19%;
+    height: 200px;
+    width: 300px;
+    background-color: #f2f2f2;
+
+
+
+}
 .boxed {
     border: 1px solid #d4d4d4;
     width: 500px;

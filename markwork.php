@@ -13,10 +13,10 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT firstname,surname,coursename,projectname,ticketname,date,file FROM users WHERE id = 29');
+$stmt = $con->prepare('SELECT firstname,surname,coursename,projectname,ticketname,jobdate,file FROM users WHERE id = 29');
 
 $stmt->execute();
-$stmt->bind_result($firstname,$surname,$coursename,$projectname,$ticketname,$date,$file);
+$stmt->bind_result($firstname,$surname,$coursename,$projectname,$ticketname,$jobdate,$file);
 $stmt->fetch();
 $stmt->close();
 
@@ -91,7 +91,7 @@ $stmt->close();
  <tr><td><h3>Course name:</h3></td><td><?=$coursename?></td></tr>
  <tr><td><h3>Project name:</h3></td><td><?=$projectname?></td></tr>
  <tr><td><h3>Title of work:</h3></td><td><?=$ticketname?></td></tr>
- <tr><td><h3>Date:</h3></td><td><?=$date?></td></tr>
+ <tr><td><h3>Date/time:</h3></td><td><?=$jobdate?></td></tr>
  <?php foreach ($files as $file): ?><tr><td><h3 >Submission:</h3></td><td><?php echo $file['file']; ?><div style="display:inline-block">
 
  </p><a href="markwork.php?file_id=<?php echo $file['id'] ?>">Download</a></td></tr>  <?php endforeach;?>

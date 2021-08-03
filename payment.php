@@ -12,10 +12,10 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT firstname,surname,address,town,city,postcode,phone,email,service,amount,cardno,expirydate,securitycode,postingdate FROM users WHERE id = 2');
+$stmt = $con->prepare('SELECT firstname,surname,address,town,city,postcode,phone,email,service,amount,cardno,expirydate,securitycode,jobdate FROM users WHERE id = 2');
 
 $stmt->execute();
-$stmt->bind_result($firstname,$surname,$address,$town,$city,$postcode,$phone,$email,$service,$amount,$cardno,$expirydate,$securitycode,$postingdate);
+$stmt->bind_result($firstname,$surname,$address,$town,$city,$postcode,$phone,$email,$service,$amount,$cardno,$expirydate,$securitycode,$jobdate);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -101,7 +101,7 @@ $stmt->close();
          <tr> <td><h3>Service:</h3></td>
           <td><?=$service?></td></tr>
          <tr> <td><h3>Amount:</h3></td>
-          <td><?=$amount?></td></tr>
+          <td>£<?=$amount?></td></tr>
          <tr> <td><h3>Card number:</h3></td>
           <td><?=$cardno?></td></tr>
          <tr> <td><h3>Expiry date:</h3></td>
@@ -109,7 +109,7 @@ $stmt->close();
          <tr> <td><h3>Security code:</h3></td>
           <td><?=$securitycode?></td></tr>
          <tr> <td><h3>Date:</h3></td>
-          <td><?=$postingdate?></td></tr>
+          <td><?=$jobdate?></td></tr>
           
        
        
@@ -117,7 +117,7 @@ $stmt->close();
       <div style="margin-top:5%;margin-left: 2%;">
       <a href="makepayment.html"><button>Make payment</button></a>
 </div></div>
-<div style="margin-bottom: 10%;padding-bottom: 15%;margin-left: 2%;">{% with messages = get_flashed_messages() %}
+<div style="margin-bottom: 10%;padding-bottom: 15%;margin-left: 2%;">
   </div>
 <div style="background-color: #d4d4d4;">
     <footer style="background-color: #d4d4d4;">

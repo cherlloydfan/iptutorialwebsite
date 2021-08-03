@@ -55,6 +55,6 @@ if (isset($_POST['edit'])) {
     password = '$password', email = '$email' WHERE id = 2";
   	mysqli_query($db, $query);
   	
-  	header('location: studentsettings.php');
+  	header('location: studentsettings.html');
   }
 }

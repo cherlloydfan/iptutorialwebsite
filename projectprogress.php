@@ -117,8 +117,17 @@ $stmt->close();
    
 
 </tr>
+<tr>
+  <td  ><h3>Progress:</h3></td>
+  <td><div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  </td>
+ 
 
-<tr><td><td> <a href="workspace.php"><button >Workspace</button></td></tr></a>
+</tr>
+<tr><td><button onclick="finishcourse()" >Finish project</button></td>
+<td> <a href="workspace.php"><button >Workspace</button></td></tr></a>
 
   </table>
   

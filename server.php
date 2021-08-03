@@ -4,7 +4,7 @@ $firstname = "";
 $surname = "";
 $username = "";
 $email    = "";
-
+$hash = md5( rand(0,1000) ); 
 $errors = array(); 
 
 
@@ -28,7 +28,7 @@ if (isset($_POST['signup'])) {
   if ($password != $confirmpassword) {
 	array_push($errors, "The two passwords do not match");
   }
-
+  
 
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
@@ -47,11 +47,30 @@ if (isset($_POST['signup'])) {
   if (count($errors) == 0) {
   
 
-  	$query = "INSERT INTO users (firstname,surname,username, email, password) 
-  			  VALUES('$firstname','$surname','$username', '$email', '$password')";
+  	$query = "INSERT INTO users (firstname,surname,username, email, password,hash) 
+  			  VALUES('$firstname','$surname','$username', '$email', '$password','$hash')";
   	mysqli_query($db, $query);
+    $to      = $email; 
+    $subject = 'Sign up verification';  
+    $message = '
+  
+    Thanks for signing up!
+    Your account has been created, you can login with the following details after you have activated your account by clicking on the link below.
+  
+    ------------------------
+    Username: '.$username.'
+    Password: '.$password.'
+    ------------------------
+  
+    Please click this link to activate your account:
+    http://localhost/tutorialwebsite/verify2.php?email='.$email.'&hash='.$hash.'
+  
+    '; 
+                      
+    $headers = 'From:noreply@iptutorials.com' . "\r\n"; 
+    mail($to, $subject, $message, $headers); 
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: studentdashboard.html');
+  	header('location: studentdashboard.php');
   }
 }

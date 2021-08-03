@@ -23,7 +23,7 @@ $stmt->close();
 <html> 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/courseprogress.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/tutorcourses.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap" rel="stylesheet">
@@ -92,8 +92,8 @@ $stmt->close();
  
     </tr>
     <tr>
-      <td><h3>Project description:</h3></td>
-      <td><?=$projectdescription?></td>
+      <td style="line-height: 1.6; width:20%"><h3>Project description:</h3></td>
+      <td style="line-height: 1.6; width:40%"><?=$projectdescription?></td>
      
 
   </tr>
@@ -104,7 +104,15 @@ $stmt->close();
    
 
 </tr>
+<tr>
+  <td  ><h3>Progress:</h3></td>
+  <td><div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  </td>
+ 
 
+</tr>
 <tr>
     <td><h3>Student's enrolled:</h3></td>
     <td><?=$firstname?> <?=$surname?>
@@ -113,7 +121,7 @@ $stmt->close();
 
   </tr>
 <tr>
-<td> <a href="addproject.html"><button>Add new project </button></a>
+<td><button onclick="finishcourse()" >Finish course</button></td><td> <a href="addproject.html"><button>Add new project </button></a>
 </td> </tr>
 
   </table>

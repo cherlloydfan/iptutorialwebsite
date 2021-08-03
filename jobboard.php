@@ -1,9 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.html');
-	exit;
-}
+
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
@@ -12,9 +8,8 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT jobname,companyname,jobdescription,jobdate,jobhours,jobtype,jobskills FROM users WHERE id = ?');
-// In this case we can use the account ID to get the account info.
-$stmt->bind_param('i', $_SESSION['id']);
+$stmt = $con->prepare('SELECT jobname,companyname,jobdescription,jobdate,jobhours,jobtype,jobskills FROM users WHERE id = 2');
+
 $stmt->execute();
 $stmt->bind_result($jobname,$companyname,$jobdescription,$jobdate,$jobhours,$jobtype,$jobskills);
 $stmt->fetch();
@@ -137,7 +132,7 @@ $stmt->close();
    
 
 </tr>
-<tr><td><a href="jobapplication.php">   <button style=" width:100px"  >Apply for job</button></a></td></tr>
+<tr><td><a href="jobapplication.html">   <button style=" width:100px"  >Apply for job</button></a></td></tr>
   
 
   </table>

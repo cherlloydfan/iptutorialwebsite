@@ -70,14 +70,14 @@ if (!isset($_SESSION['loggedin'])) {
   <h2>Welcome back,  <?=$_SESSION['name']?>!</h2>
 <div class="left"> 
   <h2>My courses</h2>
-  <h3> <a href="courseprogress.php">Course name</a></h3>
+  <h3> <a href="courseprogress.php">Intellectual property</a></h3>
 
   
 
 </div>
 <div class="right"> 
  <h2>My projects</h2>
- <h3> <a href="projectprogress.php">Project name</a></h3>
+ <h3> <a href="projectprogress.php">Copyright</a></h3>
 
  <a href="submitwork.html"><button >Add submission</button></a>
 </div>
