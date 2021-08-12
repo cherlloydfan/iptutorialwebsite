@@ -22,7 +22,6 @@
               <a href="{{url('tutorprojects')}}">Projects</a>
               <a href="{{url('sessions')}}">Sessions</a>
               <a href="{{url('content')}}">Content</a>
-              <a href="{{url('meeting')}}">Meeting</a>
 
             </div></div>
             <div class="dropdown">

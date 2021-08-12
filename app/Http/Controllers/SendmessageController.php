@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use Redirect;
 class SendmessageController extends Controller
 {  public function index(){
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conn = mysqli_connect('localhost', 'root', '', 'tutorialwebsite');
 session_start();
 $subject = "";

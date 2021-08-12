@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.html');
-	exit;
+  return Redirect::to('login');	
+  exit;
 }
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -12,8 +12,8 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT firstname,surname,address,town,city,postcode,phone,email,service,amount,cardno,expirydate,securitycode,jobdate FROM users WHERE id = ?');
-$stmt->bind_param('i', $_SESSION['id']);
+$stmt = $con->prepare('SELECT firstname,surname,address,town,city,postcode,phone,email,service,amount,cardno,expirydate,securitycode,jobdate FROM users WHERE id = 2');
+
 
 $stmt->execute();
 $stmt->bind_result($firstname,$surname,$address,$town,$city,$postcode,$phone,$email,$service,$amount,$cardno,$expirydate,$securitycode,$jobdate);

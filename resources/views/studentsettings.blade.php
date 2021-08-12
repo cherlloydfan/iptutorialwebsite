@@ -84,7 +84,7 @@
      <td><input type="email" name="email" id="email"  minlength="2" maxlength="50" onkeyup="checkemail();"  pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"   > </input></td></tr>
       </div><br>
          <div style="padding-bottom: 15px;">
-     <tr><td><label style="display: inline;">Confirm Email address:</label></td>
+     <tr><td><label style="display: inline;">Confirm email address:</label></td>
      <td><input type="email" name="confirmemail" id="confirmemail"  minlength="2" maxlength="50" onkeyup="checkemail();"  pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"   > </input></td></tr>
       </div><br>
        <tr><td> <button style=" width:100px; margin-right:2%" type="submit" name="edit" id="edit" value="signup" id="signup"  onclick="CheckPassword(document.signupform.password);validateEmail(document.signupform.email);validation(document.signupform.firstname,surname,email,username,password,confirmpassword);checkname(document.signupform.username);validateForm();checkemail(document.signupform.email);ValidateEmail(document.signupform.email);validatesurname(document.signupform.surname);validatefirstname(document.signupform.firstname);Validatename(document.signupform.firstname)" onsubmit="return validateForm();" >Save details</button></td></tr>

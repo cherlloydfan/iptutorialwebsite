@@ -20,6 +20,7 @@ $postcode = "";
 $country = "";
 $phone = "";
 $experience = "";
+$id = $_SESSION['id'];
 
 $errors = array(); 
 
@@ -76,9 +77,11 @@ if (isset($_POST['edit'])) {
   
 
   	$query = "UPDATE users SET username = '$username', firstname = '$firstname', surname = '$surname',
-    password = '$password', email = '$email', address = '$address', town = '$town', city = '$city', postcode = '$postcode', country = '$country', phone = '$phone', workexperience = '$experience' WHERE id = 2";
+    password = '$password', email = '$email', address = '$address', town = '$town', city = '$city', postcode = '$postcode', country = '$country', phone = '$phone', workexperience = '$experience' WHERE id = $id";
   	mysqli_query($db, $query);
-  	
+    
+
+
     return Redirect::to('studentaccount');
   }
 }

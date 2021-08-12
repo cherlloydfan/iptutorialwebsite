@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: login');
-	exit;
+  return Redirect::to('login');	
+  exit;
 }
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -12,9 +12,8 @@ $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
 if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
-$stmt = $con->prepare('SELECT coursename,coursedescription,coursechapters FROM users WHERE id = ?');
-// In this case we can use the account ID to get the account info.
-$stmt->bind_param('i', $_SESSION['id']);
+$stmt = $con->prepare('SELECT coursename,coursedescription,coursechapters FROM users WHERE id = 2');
+
 $stmt->execute();
 $stmt->bind_result($coursename,$coursedescription,$coursechapters);
 $stmt->fetch();
@@ -101,7 +100,7 @@ $stmt->close();
 
 </tr>
 
-<tr><td><form action="{{url('finishcourse')}}" method="post"> @csrf <button type="submit" onclick="finishcourse()" name="send">Finish course</button></form></td>
+<tr><td><form action="{{url('finishcourse')}}" method="post"> @csrf <button type="submit" onclick="finishcourse();move();" name="send">Finish course</button></form></td>
 
 <td> <a href="workspace"><button >Workspace</button></td></tr></a>
 

@@ -55,7 +55,6 @@ if (isset($_POST['signup'])) {
   	$query = "INSERT INTO users (firstname,surname,username, email, password,type) 
   			  VALUES('$firstname','$surname','$username', '$email', '$password','sponser')";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-    return Redirect::to('sponserdashboard');   }
+  	
+    return Redirect::to('login');   }
 }}}

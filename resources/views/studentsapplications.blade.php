@@ -2,8 +2,8 @@
 
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.html');
-	exit;
+  return Redirect::to('login');	
+  exit;
 }
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
